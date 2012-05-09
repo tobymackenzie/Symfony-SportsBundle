@@ -1,0 +1,9 @@
+tjmSportsHome:
+ pattern: /
+ defaults: {_controller: TJMSportsBundle:Default:index}
+
+tjmSportsTest:
+ pattern: /test{parameters}
+ defaults: {_controller: TJMSportsBundle:Default:test}
+ requirements:
+  parameters: .*
