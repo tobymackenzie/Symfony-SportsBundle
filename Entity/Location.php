@@ -6,7 +6,7 @@ use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
 TJM\Bundle\SportsBundle\Entity\Entity
-@ORM\Table("sports_location")
+@ORM\Table("sports_locations")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
 class Location extends Item{
@@ -35,6 +35,7 @@ class Location extends Item{
 	@return string $name
 	*/
 	public function setName($value){
-		return $this->name = $value;
+		$this->name = $value;
+		return $this;
 	}
 }

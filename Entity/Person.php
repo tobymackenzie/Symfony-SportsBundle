@@ -6,7 +6,7 @@ use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
 TJM\Bundle\SportsBundle\Entity\Entity
-@ORM\Table("sports_person")
+@ORM\Table("sports_persons")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
 class Person extends Item{
@@ -14,27 +14,48 @@ class Person extends Item{
 	==attributes/fields
 	==========*/
 	/**
-	@var string $name
-	@ORM\Column(name="name", type="string")
+	@var string $firstName
+	@ORM\Column(name="first_name", type="string")
 	*/
-	protected $name;
+	protected $firstName;
+	/**
+	@var string $lastName
+	@ORM\Column(name="last_name", type="string")
+	*/
+	protected $lastName;
 
 
 	/*==========
 	==getters and setters
 	==========*/
 	/**
-	get name attribute
-	@return string $name
+	get firstname attribute
+	@return string $firstName
 	*/
-	public function getName(){
-		return $this->name;
+	public function getFirstName(){
+		return $this->firstName;
 	}
 	/**
-	set name attribute
+	set firstname attribute
 	@return string $name
 	*/
-	public function setName($value){
-		return $this->name = $value;
+	public function setFirstName($value){
+		$this->firstName = $value;
+		return $this;
+	}
+	/**
+	get lastname attribute
+	@return string $lastName
+	*/
+	public function getLastName(){
+		return $this->lastName;
+	}
+	/**
+	set lastname attribute
+	@return string $name
+	*/
+	public function setLastName($value){
+		$this->lastName = $value;
+		return $this;
 	}
 }

@@ -40,7 +40,7 @@ class Item extends BaseEntity{
 	==========*/
 	/**
 	@var integer $id
-	@ORM\Column(name="unid", type="integer", nullable=false)
+	@ORM\Column(name="unid", type="integer", nullable=false, columnDefinition="integer unsigned")
 	@ORM\Id
 	@ORM\GeneratedValue(strategy="AUTO")
 	*/

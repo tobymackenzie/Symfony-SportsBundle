@@ -6,7 +6,7 @@ use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
 TJM\Bundle\SportsBundle\Entity\Entity
-@ORM\Table("sports_page")
+@ORM\Table("sports_pages")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
 class Page extends Item{
@@ -14,8 +14,13 @@ class Page extends Item{
 	==attributes/fields
 	==========*/
 	/**
-	@var string $name
-	@ORM\Column(name="name", type="string")
+	@var string $content
+	@ORM\Column(name="content", type="text")
+	*/
+	protected $content;
+	/**
+	@var text $name
+	@ORM\Column(name="name", type="text")
 	*/
 	protected $name;
 
@@ -23,6 +28,21 @@ class Page extends Item{
 	/*==========
 	==getters and setters
 	==========*/
+	/**
+	get content attribute
+	@return text $content
+	*/
+	public function getContent(){
+		return $this->content;
+	}
+	/**
+	set content attribute
+	@return text $content
+	*/
+	public function setContent($value){
+		$this->content = $value;
+		return $this;
+	}
 	/**
 	get name attribute
 	@return string $name
@@ -35,6 +55,7 @@ class Page extends Item{
 	@return string $name
 	*/
 	public function setName($value){
-		return $this->name = $value;
+		$this->name = $value;
+		return $this;
 	}
 }
