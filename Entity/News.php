@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
-TJM\Bundle\SportsBundle\Entity\Entity
+TJM\Bundle\SportsBundle\Entity\News
 @ORM\Table("sports_news")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
@@ -28,6 +28,17 @@ class News extends Item{
 	@ORM\Column(name="summary", type="text")
 	*/
 	protected $summary;
+	/**
+	@var TJM\Bundle\SportsBundle\Entity\Team
+	@ORM\ManyToOne(targetEntity="TJM\Bundle\SportsBundle\Entity\Team")
+	@ORM\JoinColumns({
+		@ORM\JoinColumn(
+			name="team"
+			,referencedColumnName="id"
+		)
+	})
+	*/
+	protected $team;
 
 
 	/*==========

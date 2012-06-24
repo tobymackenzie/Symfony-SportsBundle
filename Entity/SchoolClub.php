@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
-TJM\Bundle\SportsBundle\Entity\Entity
+TJM\Bundle\SportsBundle\Entity\SchoolClub
 @ORM\Table("sports_school_clubs")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */

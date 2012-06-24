@@ -4,12 +4,12 @@ namespace TJM\Bundle\SportsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
-/*
-TJM\Bundle\SportsBundle\Entity\Entity
-@ORM\Table("sports_asdf")
+/**
+TJM\Bundle\SportsBundle\Entity\Grade
+@ORM\Table("sports_grade")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
-class Asdf extends Item{
+class Grade extends Item{
 	/*==========
 	==attributes/fields
 	==========*/

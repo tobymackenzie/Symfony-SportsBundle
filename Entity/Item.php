@@ -5,11 +5,16 @@ use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\BaseBundle\Entity\Entity as BaseEntity;
 
 /**
-TJM\Bundle\SportsBundle\Entity\Entity
+TJM\Bundle\SportsBundle\Entity\Item
 @ORM\Table("sports_items")
 @ORM\InheritanceType("JOINED")
-@ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
-@ORM\DiscriminatorColumn(name="itemType", type="string")
+@ORM\Entity(
+	repositoryClass="TJM\Bundle\SportsBundle\Repository\Items"
+)
+@ORM\DiscriminatorColumn(
+	name="itemType"
+	,type="string"
+)
 @ORM\DiscriminatorMap({
 	"division" = "Division"
 	,"event" = "Event"
@@ -17,6 +22,7 @@ TJM\Bundle\SportsBundle\Entity\Entity
 	,"file" = "File"
 	,"fileType" = "FileType"
 	,"gender" = "Gender"
+	,"grade" = "Grade"
 	,"level" = "Level"
 	,"location" = "Location"
 	,"news" = "News"
@@ -40,7 +46,12 @@ class Item extends BaseEntity{
 	==========*/
 	/**
 	@var integer $id
-	@ORM\Column(name="unid", type="integer", nullable=false, columnDefinition="integer unsigned")
+	@ORM\Column(
+		name="unid"
+		,type="integer"
+		,nullable=false
+		,columnDefinition="integer unsigned"
+	)
 	@ORM\Id
 	@ORM\GeneratedValue(strategy="AUTO")
 	*/

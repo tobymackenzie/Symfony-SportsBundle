@@ -4,48 +4,37 @@ namespace TJM\Bundle\SportsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
-/**
-TJM\Bundle\SportsBundle\Entity\TeamPlayer
-@ORM\Table("sports_team_players")
+/*
+TJM\Bundle\SportsBundle\Entity\EventTeam
+@ORM\Table("sports_event_team")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
-class TeamPlayer extends Item{
+class EventTeam extends Item{
 	/*==========
 	==attributes/fields
 	==========*/
 	/**
-	@var TJM\Bundle\SportsBundle\Entity\Grade
-	@ORM\ManyToOne(targetEntity="TJM\Bundle\SportsBundle\Entity\Grade")
+	@var TJM\Bundle\SportsBundle\Entity\Event
+	@ORM\ManyToOne(targetEntity="TJM\Bundle\SportsBundle\Entity\Event")
 	@ORM\JoinColumns({
 		@ORM\JoinColumn(
-			name="grade"
+			name="event"
 			,referencedColumnName="id"
 		)
 	})
 	*/
-	protected $grade;
+	protected $event;
 	/**
-	@var TJM\Bundle\SportsBundle\Entity\Person
-	@ORM\ManyToOne(targetEntity="TJM\Bundle\SportsBundle\Entity\Person")
+	@var TJM\Bundle\SportsBundle\Entity\Result
+	@ORM\ManyToOne(targetEntity="TJM\Bundle\SportsBundle\Entity\Result")
 	@ORM\JoinColumns({
 		@ORM\JoinColumn(
-			name="person"
+			name="result"
 			,referencedColumnName="id"
 		)
 	})
 	*/
-	protected $person;
-	/**
-	@var TJM\Bundle\SportsBundle\Entity\Position
-	@ORM\ManyToOne(targetEntity="TJM\Bundle\SportsBundle\Entity\Position")
-	@ORM\JoinColumns({
-		@ORM\JoinColumn(
-			name="position"
-			,referencedColumnName="id"
-		)
-	})
-	*/
-	protected $position;
+	protected $result;
 	/**
 	@var TJM\Bundle\SportsBundle\Entity\Team
 	@ORM\ManyToOne(targetEntity="TJM\Bundle\SportsBundle\Entity\Team")

@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
-TJM\Bundle\SportsBundle\Entity\Entity
+TJM\Bundle\SportsBundle\Entity\Location
 @ORM\Table("sports_locations")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
@@ -13,6 +13,11 @@ class Location extends Item{
 	/*==========
 	==attributes/fields
 	==========*/
+	/**
+	@var string $address
+	@ORM\Column(name="address", type="string")
+	*/
+	protected $address;
 	/**
 	@var string $name
 	@ORM\Column(name="name", type="string")

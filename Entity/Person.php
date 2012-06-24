@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
-TJM\Bundle\SportsBundle\Entity\Entity
+TJM\Bundle\SportsBundle\Entity\Person
 @ORM\Table("sports_persons")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
@@ -15,12 +15,12 @@ class Person extends Item{
 	==========*/
 	/**
 	@var string $firstName
-	@ORM\Column(name="first_name", type="string")
+	@ORM\Column(name="firstName", type="string")
 	*/
 	protected $firstName;
 	/**
 	@var string $lastName
-	@ORM\Column(name="last_name", type="string")
+	@ORM\Column(name="lastName", type="string")
 	*/
 	protected $lastName;
 

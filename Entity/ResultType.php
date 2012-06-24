@@ -5,8 +5,8 @@ use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
-TJM\Bundle\SportsBundle\Entity\Entity
-@ORM\Table("sports_result_types")
+TJM\Bundle\SportsBundle\Entity\ResultType
+@ORM\Table("sports_resultTypes")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
 class ResultType extends Item{
@@ -18,6 +18,26 @@ class ResultType extends Item{
 	@ORM\Column(name="name", type="string")
 	*/
 	protected $name;
+	/**
+	@var TJM\Bundle\SportsBundle\Entity\Sport
+	@ORM\ManyToMany(targetEntity="TJM\Bundle\SportsBundle\Entity\Sport")
+	@ORM\JoinTable(
+		name="sports_resultTypes_sports",
+		joinColumns={
+			@ORM\JoinColumn(
+				name="sport"
+				,referencedColumnName="id"
+			)
+		},
+		inverseJoinColumns={
+			@ORM\JoinColumn(
+				name="resultType"
+				,referencedColumnName="id"
+			)
+		}
+	)
+	*/
+	protected $sports;
 
 
 	/*==========

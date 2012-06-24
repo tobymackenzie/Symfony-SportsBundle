@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
-TJM\Bundle\SportsBundle\Entity\Entity
+TJM\Bundle\SportsBundle\Entity\Level
 @ORM\Table("sports_levels")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
@@ -18,6 +18,11 @@ class Level extends Item{
 	@ORM\Column(name="name", type="string")
 	*/
 	protected $name;
+	/**
+	@var string $shortName
+	@ORM\Column(name="shortName", type="string")
+	*/
+	protected $shortName;
 
 
 	/*==========
