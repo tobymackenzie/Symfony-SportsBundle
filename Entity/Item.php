@@ -47,7 +47,7 @@ class Item extends BaseEntity{
 	/**
 	@var integer $id
 	@ORM\Column(
-		name="unid"
+		name="id"
 		,type="integer"
 		,nullable=false
 		,columnDefinition="integer unsigned"

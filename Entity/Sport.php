@@ -22,7 +22,6 @@ class Sport extends Item{
 	@var TJM\Bundle\SportsBundle\Entity\Season
 	@ORM\ManyToMany(
 		targetEntity="TJM\Bundle\SportsBundle\Entity\Season"
-		,inversedBy="fooManyToManyInverseSide"
 	)
 	@ORM\JoinTable(
 		name="sports_seasons_sports",

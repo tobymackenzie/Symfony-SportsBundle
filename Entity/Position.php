@@ -20,7 +20,9 @@ class Position extends Item{
 	protected $name;
 	/**
 	@var TJM\Bundle\SportsBundle\Entity\Sport
-	@ORM\ManyToMany(targetEntity="TJM\Bundle\SportsBundle\Entity\Sport")
+	@ORM\ManyToMany(
+		targetEntity="TJM\Bundle\SportsBundle\Entity\Sport"
+	)
 	@ORM\JoinTable(
 		name="sports_postions_sports",
 		joinColumns={
