@@ -6,7 +6,7 @@ use TJM\Bundle\SportsBundle\Entity\Item;
 
 /**
 TJM\Bundle\SportsBundle\Entity\Division
-@ORM\Table("sports_divisions")
+@ORM\Table(name="sports_divisions")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
 class Division extends Item{

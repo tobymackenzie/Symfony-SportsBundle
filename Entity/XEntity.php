@@ -4,12 +4,12 @@ namespace TJM\Bundle\SportsBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use TJM\Bundle\SportsBundle\Entity\Item;
 
-/**
-TJM\Bundle\SportsBundle\Entity\Position
-@ORM\Table(name="sports_positions")
+/*
+TJM\Bundle\SportsBundle\Entity\Entity
+@ORM\Table(name="sports_asdf")
 @ORM\Entity(repositoryClass="TJM\Bundle\SportsBundle\Repository\Items")
 */
-class Position extends Item{
+class Asdf extends Item{
 	/*==========
 	==attributes/fields
 	==========*/
@@ -18,26 +18,6 @@ class Position extends Item{
 	@ORM\Column(name="name", type="string")
 	*/
 	protected $name;
-	/**
-	@var TJM\Bundle\SportsBundle\Entity\Sport
-	@ORM\ManyToMany(targetEntity="TJM\Bundle\SportsBundle\Entity\Sport")
-	@ORM\JoinTable(
-		name="sports_postions_sports",
-		joinColumns={
-			@ORM\JoinColumn(
-				name="sport"
-				,referencedColumnName="id"
-			)
-		},
-		inverseJoinColumns={
-			@ORM\JoinColumn(
-				name="position"
-				,referencedColumnName="id"
-			)
-		}
-	)
-	*/
-	protected $sports;
 
 
 	/*==========

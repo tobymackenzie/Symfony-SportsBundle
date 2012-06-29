@@ -6,7 +6,7 @@ use TJM\Bundle\BaseBundle\Entity\Entity as BaseEntity;
 
 /**
 TJM\Bundle\SportsBundle\Entity\Item
-@ORM\Table("sports_items")
+@ORM\Table(name="sports_items")
 @ORM\InheritanceType("JOINED")
 @ORM\Entity(
 	repositoryClass="TJM\Bundle\SportsBundle\Repository\Items"
